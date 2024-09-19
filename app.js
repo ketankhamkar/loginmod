@@ -12,7 +12,7 @@ const swaggerDocument = require("./swagger-output.json");
 
 app.use(bodyParser.json());
 
-connectDB();
+// connectDB();
 
 console.log("my name is", process.env.myVar);
 app.get("/", (req, res) => {
