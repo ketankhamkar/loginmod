@@ -21,6 +21,6 @@ app.use("/user", userRouter);
 // Swagger setup
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`Server running on ports ${PORT}`);
 });
