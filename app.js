@@ -14,7 +14,6 @@ app.use(bodyParser.json());
 
 // connectDB();
 
-console.log("my name is", process.env.myVar);
 app.get("/", (req, res) => {
   res.send("Welcome to login module");
 });
@@ -22,6 +21,6 @@ app.use("/user", userRouter);
 // Swagger setup
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Server running on ports ${PORT}`);
 });
