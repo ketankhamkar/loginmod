@@ -12,7 +12,7 @@ const swaggerDocument = require("./swagger-output.json");
 
 app.use(bodyParser.json());
 
-// connectDB();
+connectDB();
 
 app.get("/", (req, res) => {
   res.send("Welcome to login module");
